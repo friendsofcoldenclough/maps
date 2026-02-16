@@ -1,0 +1,19 @@
+{
+  "name": "focc-maps",
+  "version": "0.0.1",
+  "description": "Jekyll site for Friends of Colden Clough Map Group",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node _scripts/minify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjorsq/focc.git"
+  },
+  "author": "Peter Edwards <pete@bjorsq.net>",
+  "license": "UNLICENSE",
+  "devDependencies": {
+    "sass": "^1.97.3",
+    "uglify-js": "^3.19.3"
+  }
+}

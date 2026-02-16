@@ -1,0 +1,8 @@
+remote_theme: friendsofcoldenclough/jekyll-theme-focc
+title: Friends of Colden Clough
+description: A friendly community volunteer group carrying out nature restoration work in the ancient woodland of Colden Clough
+url: "https://friendsofcoldenclough.org.uk"
+baseurl: "/maps"
+host: localhost
+port: 4000
+markdown: kramdown
