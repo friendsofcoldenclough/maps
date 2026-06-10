@@ -2,6 +2,7 @@
 layout: page
 permalink: /
 title: Map Group
+js: tilesets.js
 ---
 
 ## FoCC GitHub Pages experiments

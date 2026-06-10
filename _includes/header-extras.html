@@ -1,5 +1,19 @@
-        {% if jekyll.environment == "production" %}
-        <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/maps.min.css">
-        {% else %}
-        <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/maps.css">
-        {% endif %}
+        <script type="importmap">
+        {
+            "imports": {
+                "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
+                "leaflet-extra-markers": "https://unpkg.com/leaflet-extra-markers@2.0.1/src/index.js",
+                "locatecontrol": "https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@v0.89.0/dist/L.Control.Locate.esm.js",
+                "fullscreencontrol": "https://unpkg.com/leaflet.fullscreen/dist/Control.FullScreen.js",
+                "themecontrol": "https://unpkg.com/leaflet-theme-control/src/leaflet-theme-control.js",
+                "a11y-dialog": "https://cdn.jsdelivr.net/npm/a11y-dialog@8/dist/a11y-dialog.esm.min.js",
+                "cookieconsent": "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"
+            }
+        }
+        </script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@v0.89.0/dist/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen/dist/Control.FullScreen.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-theme-control/src/leaflet-theme-control.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css" />
+        <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/maps.css">        
