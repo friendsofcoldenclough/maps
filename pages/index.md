@@ -5,7 +5,18 @@ title: Map Group
 js: tilesets.js
 ---
 
-## FoCC GitHub Pages experiments
+### Eaves Playground meeting point links:
+
+* [Google Maps](https://www.google.com/maps/dir/?api=1&destination=53.745728,-2.027694)
+* [what3words](https://w3w.co/tramps.placidly.drilling) - ///tramps.placidly.drilling
+
+### INNS Mapper
+
+INNS Mapper is an app and website for the reporting of management, sightings and surveys of INNS (Invasive Non-Native Species) and NNS (non-native species) in England, Wales and Scotland.
+
+* <https://innsmapper.org/>
+* [Download iPhone app at the app store](https://apps.apple.com/gb/app/inns-mapper/id6445965106)
+* [Download Android app on Google Play](https://play.google.com/store/apps/details?id=com.natural_apptitude.innsmapper&pli=1)
 
 ### Colden Clough Protected Species designated sites map
 
