@@ -42,7 +42,7 @@
   * 1. Make the overlay look like an overlay.
   */
 .dialog-overlay {
-    background-color: rgba(43, 46, 56, 0.9);
+    background-color: var(--dialog-overlay);
     /* 1 */
     animation: fade-in 200ms both;
 }
@@ -59,14 +59,14 @@
     /* 2 */
     position: relative;
     /* 2 */
-    background-color: white;
+    background-color: var(--dialog-content-bg-colour);
+    color: var(--dialog-content-text-color);
     /* 3 */
 
     animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
     padding: 1em;
     max-width: 900px;
     width: 90%;
-    border-radius: 5px;
 }
 
 /**
@@ -114,23 +114,22 @@ html:has([role='dialog']:not([aria-hidden='true'])) {
 
 .dialog-close {
     position: absolute;
-    top: 0.5em;
+    top: 0.5rem;
     right: 0.5em;
     border: 0;
-    padding: 0.25em;
+    padding: 0.25rem;
     background-color: transparent;
-    font-size: 1.5em;
-    width: 1.5em;
-    height: 1.5em;
+    color: var(--dialog-content-text-color);
+    font-size: 3rem;
+    width: 1em;
+    height: 1em;
     text-align: center;
     cursor: pointer;
     transition: 0.15s;
-    border-radius: 50%;
 }
 
 .dialog-close:hover {
-    background-color: rgba(50, 50, 0, 0.15);
-}
+    background-color: var(--dialog-close-hover-bg)
 
 @media screen and (min-width: 700px) {
     .dialog-close {

@@ -1,6 +1,6 @@
 ---
 layout: fullscreen
 title: Heritage Detectives
-permalink: /heritage-detectives/
+permalink: /hd/
 js: heritage-detectives.js
 ---

@@ -21,16 +21,26 @@
     --top-bar-text-colour: #fff;
     --footer-bg-colour: #333;
     --footer-text-colour: #fff;
+    --dialog-overlay: rgba(210,210,210,0.9);
+    --dialog-content-bg-colour: #fff;
+    --dialog-content-text-color: #222;
+    --dialog-close-hover-bg: rgba(50, 50, 0, 0.15);
 }
 @media (prefers-color-scheme: dark) {
     :where(body) {
         --background-color: #222;
         --text-color: #fff;
         --link-colour: #a3ff91;
+        --dialog-overlay: rgba(40,40,40,0.9);
+        --dialog-content-bg-colour: #222;
+        --dialog-content-text-color: #fff;
     }
 }
 :where(body.dark) {
     --background-color: #222;
     --text-color: #fff;
     --link-colour: #a3ff91;
+    --dialog-overlay: rgba(40,40,40,0.9);
+    --dialog-content-bg-colour: #222;
+    --dialog-content-text-color: #fff;
 }
