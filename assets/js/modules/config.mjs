@@ -21,6 +21,12 @@ export const mapObj = {
             color: "#533001",
             iconSVG: '<svg version="1.1" viewBox="0 0 43.996 49.135" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-82.023 -110.19)"><path d="m82.023 132.59 10.987-8.6604v8.6604l10.984-8.6604v8.6604l11.036-8.6604v8.6604h3.9969l1.002-22.403h4.9744l1.016 22.403v26.733h-43.996z" stop-color="#000000"/><g transform="translate(-.63602 .75347)" fill="#fff"><g transform="translate(.058605)"><rect x="88.579" y="136.67" width="7.646" height="7.0143" stop-color="#000000"/><rect x="110.39" y="136.67" width="7.646" height="7.0143" stop-color="#000000"/><rect x="99.483" y="136.67" width="7.646" height="7.0143" stop-color="#000000"/></g><g transform="translate(.058605 9.5273)"><rect x="88.579" y="136.67" width="7.646" height="7.0143" stop-color="#000000"/><rect x="110.39" y="136.67" width="7.646" height="7.0143" stop-color="#000000"/><rect x="99.483" y="136.67" width="7.646" height="7.0143" stop-color="#000000"/></g></g></g></svg>'
         },
+        quarry: {
+            label: "Quarries",
+            accent: "#999999",
+            color: "#666666",
+            iconSVG: '<svg fill="#000000" height="800px" width="800px" version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" xml:space="preserve"><g id="XMLID_2_"><polygon id="XMLID_6_" points="170.5,182.3 183.4,193.2 205.8,166.8 179.4,144.4 168.4,157.3 	"/><polygon id="XMLID_5_" points="244.2,199.1 194.5,199 194.4,249.7 228.3,249.7 244.2,232.5 	"/><polygon id="XMLID_4_" points="154.4,252.4 171.2,247.4 156.1,196.8 120.2,207.5 113.2,237.7 	"/><path id="XMLID_3_" d="M119.8,30.8C80.9,8,60.5,7.3,25.2,3.2l-1.3,6.6C67.8,20,78.9,30.3,109,48.6l4.2,19.9L13.6,232.6	c-1,2-1.6,4.1-1.6,6.5c-0.1,8.1,6.3,14.8,14.4,14.9c5.3,0.1,10-2.7,12.7-6.9l98-160.3l39.9,25.5l20.5-33.8L119.8,30.8"/></g></svg>'
+        }
         park: {
             label:'Parks',
             accent: "#4d9906",
