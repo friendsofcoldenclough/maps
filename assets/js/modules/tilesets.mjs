@@ -21,6 +21,18 @@ export function initTS(){
         attribution: '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         ext: 'jpg'
     });
+    mapObj.nls1 = new TileLayer( 'https://mapseries-tilesets.s3.amazonaws.com/25_inch/yorkshire/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: 'NLS - OS 25 inch 1841-1952'
+    });
+    mapObj.nls2 = new TileLayer( 'https://mapseries-tilesets.s3.amazonaws.com/os/six-inch-yorkshireV/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: 'NLS - OS 6 inch 1888-1915 (earlier)'
+    });
+    mapObj.nls3 = new TileLayer( 'https://mapseries-tilesets.s3.amazonaws.com/os/six-inch-yorkshire/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: 'NLS - OS 6 inch 1888-1915 (later)'
+    });
     mapObj.survey = new TileLayer( 'https://allmaps.xyz/images/a51b7d4cdaadee59/{z}/{x}/{y}@2x.png', {
         maxZoom: 19,
 	    attribution: 'Tiles served by <a target="external" href="https://allmaps.org">Allmaps</a>'
@@ -33,6 +45,9 @@ export function initTS(){
     mapObj.layerControl.addBaseLayer(mapObj.MtbMap, "MtbMap");
     mapObj.layerControl.addBaseLayer(mapObj.Esri_WorldTopoMap, "Esri WorldTopoMap");
     mapObj.layerControl.addBaseLayer(mapObj.Stadia_AlidadeSatellite, "Stadia Alidade Satellite");
+    mapObj.layerControl.addOverlay(mapObj.nls1, "OS 25 inch 1841-1952");
+    mapObj.layerControl.addOverlay(mapObj.nls2, "OS 6 inch 1888-1915 (earlier)");
+    mapObj.layerControl.addOverlay(mapObj.nls3, "OS 6 inch 1888-1915 (later)");
     mapObj.layerControl.addOverlay(mapObj.survey, "Protected Species Map (2024)");
     mapObj.layerControl.addOverlay(mapObj.jefferys, "Thomas Jefferys (1772)");
     mapObj.layerControl.setPosition('topright');
