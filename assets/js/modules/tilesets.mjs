@@ -38,7 +38,6 @@ export function initTS(){
     mapObj.layerControl.addBaseLayer(mapObj.OpenTopoMap, "OpenTopoMap");
     mapObj.layerControl.addBaseLayer(mapObj.MtbMap, "MtbMap");
     mapObj.layerControl.addBaseLayer(mapObj.Esri_WorldTopoMap, "Esri WorldTopoMap");
-    mapObj.layerControl.addBaseLayer(mapObj.Stadia_AlidadeSatellite, "Stadia Alidade Satellite");
     mapObj.layerControl.addOverlay(mapObj.nls1, "OS 25 inch 1841-1952");
     mapObj.layerControl.addOverlay(mapObj.nls2, "OS 6 inch 1888-1915 (earlier)");
     mapObj.layerControl.addOverlay(mapObj.nls3, "OS 6 inch 1888-1915 (later)");
