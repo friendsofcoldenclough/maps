@@ -1,3 +1,16 @@
         {% if page.js %}
         <script type="module"src="{{ site.url }}{{ site.baseurl }}/assets/js/{{ page.js }}"></script>
         {% endif %}
+        <svg style="height: 0; width: 0; position: absolute;">
+            <defs>
+                <pattern id="replantedpattern" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+                    <line x1="0" y="0" x2="0" y2="10" stroke="#194d33" stroke-width="10" />
+                </pattern>
+                <pattern id="ancientpattern" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(135)">
+                    <line x1="0" y="0" x2="0" y2="10" stroke="#222222" stroke-width="10" />
+                </pattern>
+                <pattern id="reservepattern" patternUnits="userSpaceOnUse" width="10" height="10">
+                    <line x1="0" y="0" x2="0" y2="10" stroke="#1ebb33" stroke-width="4" />
+                </pattern>
+             </defs>
+        </svg>

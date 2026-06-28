@@ -13,7 +13,9 @@ export const mapObj = {
         lng: null
     },
     locationactive: false,
+    featuresDir: '{{ site.url }}{{ site.baseurl }}/assets/features/',
     loaded: false,
+    debug: true,
     icons: {
         mill: {
             label:'Mills',

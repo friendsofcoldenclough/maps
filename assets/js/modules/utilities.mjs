@@ -79,11 +79,30 @@ export function initMap() {
         position: "topleft",
         defaultTheme: "light",
         detectSystemTheme: false,
-        storageKey: "iiif-map-theme",
-
+        storageKey: "focc-map-theme",
+        themes: {
+          light: {
+            label: "Light",
+            filter: "",
+            icon: "☀️",
+            controlStyle: "light",
+            className: "theme-light"
+          },
+          dark: {
+            label: "Dark",
+            filter: "invert(1) hue-rotate(180deg) saturate(0.6) brightness(0.5)",
+            icon: "⚫",
+            controlStyle: "dark",
+            className: "theme-dark"
+          }
+        },
         // Callback when theme changes
         onChange: (themeKey, theme) => {
-            console.log(`Theme changed to: ${themeKey}`);
+            if ( themeKey !== 'dark' ) {
+                document.body.classList.remove('dark');
+            } else {
+                document.body.classList.add('dark');
+            }
         }
     }).addTo(mapObj.map);
     mapObj.scalecontrol = new Control.Scale(
@@ -183,14 +202,14 @@ function getWithExpiry( key ) {
  * @param {Integer} options.expiry How long to cache the results (in hours) default: 24
  * @param {Function} options.callback callback function with one parameter (JSON parsed response)
  */
-function getJSON( options ) {
+export function getJSON( options ) {
     if ( ! options.hasOwnProperty( 'key' ) || ! options.hasOwnProperty( 'url' ) ) {
         return;
     }
     if ( ! options.hasOwnProperty( 'expires' ) ) {
         options.expires = 24;
     }
-    if ( storageAvailable( 'localStorage' ) && getWithExpiry( options.key ) ) {
+    if ( options.expires > 0 && storageAvailable( 'localStorage' ) && getWithExpiry( options.key ) ) {
         splog( "getting data '"+options.key+"' from local storage", "utilities.js" );
         if ( options.hasOwnProperty( 'callback' ) && typeof options.callback == 'function' ) {
             options.callback( JSON.parse( getWithExpiry( options.key ) ) );
@@ -213,3 +232,14 @@ function getJSON( options ) {
     }
 }
 
+/**
+ * Logs messages to console if debug flag is set
+ * @param {string} message
+ * @param {string} filename
+ */
+function splog( message, filename ) {
+    if ( mapObj.debug ) {
+        let now = new Date();
+        console.log( now.getHours() + ':' + now.getMinutes().toString().padStart(2, '0') + ':' + now.getSeconds().toString().padStart(2, '0') + '.' + now.getMilliseconds().toString().padStart(3, '0') + ' ' + filename.padEnd(12) + ' - ' + message );
+    }
+}
