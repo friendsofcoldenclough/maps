@@ -6,6 +6,7 @@ import {
     Polyline,
     DivIcon,
     FeatureGroup,
+    LayerGroup,
     GeoJSON,
     Marker,
     SVGOverlay
@@ -25,12 +26,12 @@ export function initSpecies() {
     mapObj.featureProps = [];
     getJSON({
         key: 'protected-species-survey',
-        url: mapObj.featuresDir + 'protected-species-survey.json',
+        url: mapObj.featuresDir + 'protected-species-survey-edit.json',
         expires: 0,
         callback: function(data) {
             mapObj.pssgroup = new GeoJSON( data, {
                 pointToLayer: function (feature, latlng) {
-                    return new CircleMarker(latlng, getMarkerOptions(feature));
+                    return getMarker(feature, latlng);
                 },
                 onEachFeature: function( feature, layer ) {
                     layer.bindPopup(feature.properties.name);
@@ -47,12 +48,27 @@ export function initSpecies() {
                     }
                 }
             }).addTo(mapObj.map);
+            mapObj.layerControl.setPosition('topright').expand();
+            mapObj.types = {};
+            mapObj.pssgroup.eachLayer( layer => {
+                if ( ! mapObj.types[layer.feature.properties.type] ) {
+                    mapObj.types[layer.feature.properties.type] = {
+                        label: layer.feature.properties.name,
+                        group: new FeatureGroup([layer]).addTo(mapObj.map)
+                    };
+                } else {
+                    mapObj.types[layer.feature.properties.type].group.addLayer(layer);
+                }
+            });
+            for ( let type in mapObj.types ) {
+                mapObj.layerControl.addOverlay(mapObj.types[type].group, mapObj.types[type].label);
+            }
             
         }
     });
 }
 
-function getMarkerOptions(feature){
+function getMarker(feature, latlng){
     let typefills = {
         'plant': '#22ff22',
         'invasiveplant': '#229922',
@@ -71,9 +87,12 @@ function getMarkerOptions(feature){
     };
     if ( feature.properties.type && feature.properties.type !== '' && typefills[feature.properties.type] ) {
         styles.fillColor = typefills[feature.properties.type];
-    } else {
-        styles.fillColor = "#ff7800";
+        if ( ['invasiveplant'].indexOf(feature.properties.type) !== -1 ) {
+            let outer = createElement('div');
+            return new Marker( latlng, { icon: new DivIcon( { html: createElement('div', outer), iconSize: [8,8], iconAnchor: [4,4], className: 'marker-' + feature.properties.type } ) } );
+        } else {
+            return new CircleMarker(latlng, styles);
+        }
     }
-    return styles;
 }
 
