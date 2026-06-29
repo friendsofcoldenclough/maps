@@ -23,14 +23,14 @@ export function initTS(){
         maxZoom: 19,
         attribution: 'Reproduced with the permission of the <a href="https://maps.nls.uk/" target="nls">National Library of Scotland</a>'
     });
-    mapObj.nls3 = new TileLayer( 'https://mapseries-tilesets.s3.amazonaws.com/os/six-inch-yorkshire/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: 'Reproduced with the permission of the <a href="https://maps.nls.uk/" target="nls">National Library of Scotland</a>'
-    });
-    mapObj.survey = new TileLayer( 'https://allmaps.xyz/images/a51b7d4cdaadee59/{z}/{x}/{y}@2x.png', {
-        maxZoom: 19,
-	    attribution: 'Tiles served by <a target="external" href="https://allmaps.org">Allmaps</a>'
-    });
+    // mapObj.nls3 = new TileLayer( 'https://mapseries-tilesets.s3.amazonaws.com/os/six-inch-yorkshire/{z}/{x}/{y}.png', {
+    //     maxZoom: 19,
+    //     attribution: 'Reproduced with the permission of the <a href="https://maps.nls.uk/" target="nls">National Library of Scotland</a>'
+    // });
+    // mapObj.survey = new TileLayer( 'https://allmaps.xyz/images/a51b7d4cdaadee59/{z}/{x}/{y}@2x.png', {
+    //     maxZoom: 19,
+	//     attribution: 'Tiles served by <a target="external" href="https://allmaps.org">Allmaps</a>'
+    // });
     mapObj.jefferys = new TileLayer( 'https://allmaps.xyz/images/e33822707c1a53da/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: 'Tiles served by <a target="external" href="https://allmaps.org">Allmaps</a>. Plate XII (<a href="https://www.davidrumsey.com/luna/servlet/s/r06az2">Thomas Jefferys, 1772</a>).'
@@ -39,9 +39,9 @@ export function initTS(){
     mapObj.layerControl.addBaseLayer(mapObj.MtbMap, "MtbMap");
     mapObj.layerControl.addBaseLayer(mapObj.Esri_WorldTopoMap, "Esri WorldTopoMap");
     mapObj.layerControl.addOverlay(mapObj.nls1, "OS 25 inch 1841-1952");
-    mapObj.layerControl.addOverlay(mapObj.nls2, "OS 6 inch 1888-1915 (earlier)");
-    mapObj.layerControl.addOverlay(mapObj.nls3, "OS 6 inch 1888-1915 (later)");
-    mapObj.layerControl.addOverlay(mapObj.survey, "Protected Species Map (2024)");
+    mapObj.layerControl.addOverlay(mapObj.nls2, "OS 6 inch 1888-1915");
+    // mapObj.layerControl.addOverlay(mapObj.nls3, "OS 6 inch 1888-1915 (later)");
+    // mapObj.layerControl.addOverlay(mapObj.survey, "Protected Species Map (2024)");
     mapObj.layerControl.addOverlay(mapObj.jefferys, "Thomas Jefferys (1772)");
     mapObj.layerControl.setPosition('topright');
     mapObj.layerControl.expand();

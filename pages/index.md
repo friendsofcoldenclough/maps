@@ -18,8 +18,9 @@ INNS Mapper is an app and website for the reporting of management, sightings and
 * [Download iPhone app at the app store](https://apps.apple.com/gb/app/inns-mapper/id6445965106)
 * [Download Android app on Google Play](https://play.google.com/store/apps/details?id=com.natural_apptitude.innsmapper&pli=1)
 
-### Colden Clough Protected Species designated sites map
+### Colden Clough Protected Species designated sites map (2024)
 
+* [View georeferenced version of this map]({{ site.baseurl }}{% link pages/protected-species.md %})
 * [View in OpenseaDragon](https://iiif.gdmrdigital.com/openseadragon/index.html?image=https://friendsofcoldenclough.org.uk/iiif/ccps/info.json){:target="_blank" rel="noopener"}
 * [View in Allmaps Viewer](https://viewer.allmaps.org/?url=https://annotations.allmaps.org/images/a51b7d4cdaadee59){:target="_blank" rel="noopener"}
 
@@ -27,6 +28,6 @@ INNS Mapper is an app and website for the reporting of management, sightings and
 
 This map shows a selection from some of the freely available map tile sets.
 
-It also includes overlays for the Protected species map and a map from the [David Rumsey Map Collection](https://www.davidrumsey.com/luna/servlet/s/r06az2)
+It also includes overlays for old OS maps from the <a href="https://maps.nls.uk/" target="nls">National Library of Scotland</a> and a map from the <a href="https://www.davidrumsey.com/luna/servlet/s/r06az2" target="nls">David Rumsey Map Collection</a> created by Thomas Jefferys in 1772.
 
 <div id="map" class="focc-map"></div>
